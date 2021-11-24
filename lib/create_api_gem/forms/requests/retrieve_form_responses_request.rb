@@ -17,6 +17,6 @@ class RetrieveFormResponsesRequest < FormRequest
   end
 
   def responses
-    json.fetch(:items)
+    json
   end
 end
