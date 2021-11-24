@@ -2,7 +2,7 @@ require_relative 'form_request'
 require 'open-uri'
 
 class RetrieveFormResponsesRequest < FormRequest
-  def initialize(token: APIConfig.token, form_id)
+  def initialize(form_id, token: APIConfig.token)
     r = {
       method: :get,
       url: "#{APIConfig.api_request_url}/forms/#{form_id}/responses"
